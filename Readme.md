@@ -18,3 +18,24 @@ An outlier is a point that doesn't follow the general trend of the other points.
 - independence relattionship check between two variables
 - extreme points check.
 
+## Covariance and Correlation(Finance as Case Study)
+
+Covariance is a metric to measure the amount of movement the two variables exhibit. Here is the covariance formula:
+Cov(X, Y) = E[(X - E[X]) (Y - E[Y])]
+
+- If the covariance has a positive sign, it means the two variables move in the same direction.
+- If the covariance has a negative sign, the two variables move in opposite directions.
+- If the covariance is 0, the two variables are linearly uncorrelated (uncorrelated).
+
+The higher the absolute value of the covariance of the two variables, the stronger the (positive or negative) relationship the two variables have. The downside of covariance is its value changes when the scales of two variables change. Because of this issue, we use correlation more often in data analysis.
+
+Correlation is also a metric to measure the co-movement of the two variables. However, it eliminates the scale issue mentioned above by dividing covariance with the square root of the multiplication of the two variables' variances. Here is the correlation math formula:
+
+            Corr(X, Y) = Cov(X, Y) / sqrt(Var(X) * Var(Y))
+
+- Unlike covariance, the value of correlation is limited between -1 and 1.
+- If the correlation of two variables is greater than 0, the two variables are positively correlated.
+- If the correlation of two variables is less than 0, the two variables are negatively correlated.
+- If two variables are perfectly positively correlated, the correlation will be 1.
+- If two variables are perfectly negative correlated, the correlation will be -1.
+- If the correlation is 0, the two variables are linearly uncorrelated.
