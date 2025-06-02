@@ -21,7 +21,8 @@ An outlier is a point that doesn't follow the general trend of the other points.
 ## Covariance and Correlation(Finance as Case Study)
 
 Covariance is a metric to measure the amount of movement the two variables exhibit. Here is the covariance formula:
-Cov(X, Y) = E[(X - E[X]) (Y - E[Y])]
+
+            Cov(X, Y) = E[(X - E[X]) (Y - E[Y])]
 
 - If the covariance has a positive sign, it means the two variables move in the same direction.
 - If the covariance has a negative sign, the two variables move in opposite directions.
@@ -41,3 +42,40 @@ Correlation is also a metric to measure the co-movement of the two variables. Ho
 - If the correlation is 0, the two variables are linearly uncorrelated.
 
 ![Correlation Demonstration Graphs](#) ![./imges/correlation_diagram.png](https://github.com/endiesworld/ML_projects/blob/main/images/correlation_diagram.png)
+
+### Collinear Variables
+
+Oftentimes, many variables move together in systematic ways. Such a problem is called **collinearity** for two variables. We also call the two variables correlated variables. If there are more than two variables that are correlated, it is called **multicollinearity**. How can we detect multicollinearity?
+A **correlation matrix** is the best way to investigate multicollinearity. A correlation matrix is an ensemble of the correlations of all variables.
+Figure 2 is the correlation matrix for the dependent variable and independent variables in our model. The correlation of different variables is shown on the upper right triangle of the correlation matrix. The diagonal of the correlation matrix is the correlation for the variable itself, which is always 1. The lower left triangle of the correlation matrix actually provides the same correlation information as the upper right triangle.
+
+![Correlation Matrix](#) ![./imges/correlation_matrix.png](https://github.com/endiesworld/ML_projects/blob/main/images/correlation_matrix.png)
+
+#### Dependent Variable and Independent Variables
+
+As seen in the matrix, let's examine our dependent variable. KO's excess return is fairly positively correlated with three independent variables: Dow 30 Index excess return, Pepsi excess return, and Google excess return. Therefore, we can see that these three variables are pretty good at explaining KO's excess return variation.
+
+#### Low-Correlated Independent Variables
+
+Now let's turn our focus just on independent variables. First, we'll first look at KO's revenue growth, Walmart excess return and Starbucks' excess return. They are the 3 variables that have low correlation with other independent variables. However, they also have low correlation with our dependent variable: KO excess return.
+
+#### High-Correlated Independent Variables
+
+In the matrix, the Dow 30 Index excess return has a high correlation with Google's excess return and Bank of America's excess return. Google's excess return also has a high correlation with Pepsi's excess return. With these four fairly correlated independent variables in our model, will they present any issues to our regression result?
+
+#### Impact of Multicollinearity in Regression Model
+
+If independent variables are highly correlated, the variances, standard errors and covariances of the coefficients from the regression model may be large. Then, the estimates of the coefficient will be less precise because the confidence intervals for the coefficient estimates will be wide.
+The high standard errors for the coefficient estimates also mean the estimates are less likely to be statistically significant. The
+R^2 and adjusted R^2 may be high because the whole model is still good. The collinearity issue makes it hard to separate the individual impact from correlated independent variables in the model.
+Even though it is hard to isolate each variable's impact in the model, the model can still be a good choice to forecast if the new data from the independent variables have the same collinear issue as the sample data used to build the model.
+
+### Methods to Address Multicollinearity
+
+#### Method 1
+
+This first method to reduce the impact of multicollinearity is to drop independent variables that have high correlation. Usually, the correlation between 0.8 and 0.9 is considered high correlation. You can drop one of the correlated variables from the model and run it again to see if the model improves. The problem with using this method is that it only considers the relationship between two variables one at a time. This method doesn't address multicollinearity with more than two variables. Sometimes, using correlation alone cannot find this issue.
+
+#### Method 2
+
+The second method is to treat one of the independent variables in the model as a dependent variable and run a regression with the rest of the independent variables. We can use this method to determine if any of the independent variables can be explained by the other independent variables.
