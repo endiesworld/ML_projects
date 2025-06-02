@@ -39,3 +39,5 @@ Correlation is also a metric to measure the co-movement of the two variables. Ho
 - If two variables are perfectly positively correlated, the correlation will be 1.
 - If two variables are perfectly negative correlated, the correlation will be -1.
 - If the correlation is 0, the two variables are linearly uncorrelated.
+
+![Correlation Demonstration Graphs](#) ![./imges/correlation_diagram.png](https://github.com/endiesworld/ML_projects/blob/main/images/correlation_diagram.png)
