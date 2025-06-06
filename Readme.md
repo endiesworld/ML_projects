@@ -1,4 +1,8 @@
-# Supervised Learning
+# ML Pipeline
+
+![Machine Learning Pipeline](#) ![./imges/ML_pipeline.png](https://github.com/endiesworld/ML_projects/blob/main/images/ML_pipeline.png)
+
+## Supervised Learning
 
 **Endogenous Variable:** An endogenous variable, also called a dependent variable, is a variable whose value is determined by the model.
 **Exogenous Variable:** An exogenous variable, also called an independent variable, is a variable whose value is determined outside of the model or is given to us.
@@ -79,3 +83,52 @@ This first method to reduce the impact of multicollinearity is to drop independe
 #### Method 2
 
 The second method is to treat one of the independent variables in the model as a dependent variable and run a regression with the rest of the independent variables. We can use this method to determine if any of the independent variables can be explained by the other independent variables.
+
+## Discriminative, Predictive, and Generative AI
+
+### Discriminative Models
+
+Machine Learning (ML) has progressed significantly with the advent of Deep Learning and Transformer Architecture, providing two prime categories:
+
+1. Discriminative (Predictive) AI
+2. Generative AI
+
+Discriminative AI excels in categorization, and spotting boundaries in data to predict outcomes. Examples of discriminative models include:
+
+- Decision Trees
+- Linear Regression
+- Convolutional Neural Networks (CNNs)
+- Recurrent Neural Networks (RNNs)
+
+### Generative AI
+
+Generative AI shines in creating new data resembling the input, with models like:
+
+- Generative Adversarial Networks
+- Variational Autoencoders
+
+The choice between these paths is based on:
+
+- Task complexity
+- Data quality
+- Computational resources.
+
+## Model Accuracy and Loss
+
+### Model Accuracy
+
+This is the fraction of predictions our model got right. Accuracy tells you how often the model's predictions match the actual labels. It’s an evaluation metric rather than a training signal.
+
+### Model Loss measures
+
+Measres how far the model's predictions are from the actual class labels. It is a measure of the model's error.
+Loss quantifies how wrong the model's predictions are. It’s the output of the loss function (like MSE or cross-entropy) that the optimizer uses to update weights.
+
+- Used During Training to adjust weights via backpropagation
+
+- Numerical Value: Can be any positive real number — lower is better.
+
+🧠 Think of loss as a student's raw exam score. It doesn't directly tell you how well they ranked, just how far off they are from perfect.
+For a Classification model, the typical Loss Function is Cross-Entropy Loss (categorical or binary), while for Regression Model, the typical Loss Function is Mean Squared Error (MSE)
+**Binary Cross-Entropy:** - is commonly used in binary classification tasks. It calculates the loss for each instance by comparing the predicted probability with the actual label (either 0 or 1), and then takes the average over all instances.
+**Interpretation:** - lower loss values are better, indicating that the model's predictions are closer to the actual labels. A high loss value means the model's predictions are far off from the actual labels.
