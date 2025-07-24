@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/5a16a87a4c914fe78c6d7e9f3a53d1fc/artifacts
+end_time: 1753335841566
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5a16a87a4c914fe78c6d7e9f3a53d1fc
+run_name: DecisionTree
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753335833837
+status: 3
+tags: []
+user_id: endie

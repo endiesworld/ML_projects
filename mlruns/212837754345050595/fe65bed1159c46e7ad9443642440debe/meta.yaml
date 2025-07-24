@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/212837754345050595/fe65bed1159c46e7ad9443642440debe/artifacts
+end_time: 1753336077207
+entry_point_name: ''
+experiment_id: '212837754345050595'
+lifecycle_stage: active
+run_id: fe65bed1159c46e7ad9443642440debe
+run_name: RandomForest
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753336065445
+status: 3
+tags: []
+user_id: endie

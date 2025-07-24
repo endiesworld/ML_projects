@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/212837754345050595/672326ea382e48b294e5d6c37ee2eb62/artifacts
+end_time: 1753336065373
+entry_point_name: ''
+experiment_id: '212837754345050595'
+lifecycle_stage: active
+run_id: 672326ea382e48b294e5d6c37ee2eb62
+run_name: LinearRegression
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753336056036
+status: 3
+tags: []
+user_id: endie
